@@ -13,8 +13,7 @@ app.get("/search/skills/:skills", (req, res) => {
    return (CurrCandidate.skills.length >= 4 &&
     CurrCandidate.skills.includes(req.params.skills));
    }); res.status(200).json(result);
-       res.status(500).json(err);
-  }});
+  });
 
 app.listen(PORT, () => { console.log(`Server rodando na porta ${PORT}`); });
 
